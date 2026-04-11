@@ -2,27 +2,44 @@
 
 import Link from 'next/link'
 
-/** 소모임실 대여(Reservation) 플레이스홀더 — 다크 테크 테마 */
-export function PracticeRoomInner() {
+/*
+  PracticeRoomInner — /reservation 직접 접근 시 사용되던 레거시 컴포넌트.
+  현재는 BookingTab이 대체하며, 이 컴포넌트는 호환성 유지용.
+*/
+interface PracticeRoomInnerProps {
+  onBackToLanding?: () => void
+}
+
+export function PracticeRoomInner({ onBackToLanding }: PracticeRoomInnerProps) {
   const linkClass =
-    'font-mono text-xs font-bold uppercase tracking-wide text-zinc-500 underline decoration-zinc-600 decoration-2 underline-offset-4 transition hover:text-lime-300 hover:decoration-lime-300'
+    'font-mono text-[10px] font-bold uppercase tracking-wide text-zinc-600 transition-colors duration-300 hover:text-neon'
 
   return (
-    <div
-      className="flex min-h-0 flex-1 flex-col p-4"
-      aria-label="소모임실 대여 페이지"
-    >
-      <Link href="/" className={linkClass}>
-        {'← // back_to: core_system'}
-      </Link>
+    <div className="flex min-h-0 flex-1 flex-col p-4" aria-label="소모임실 대여">
+      {onBackToLanding ? (
+        <button type="button" onClick={onBackToLanding} className={linkClass}>
+          {'← // back_to: landing'}
+        </button>
+      ) : (
+        <Link href="/" className={linkClass}>
+          {'← // back_to: core_system'}
+        </Link>
+      )}
 
-      <div className="mt-10 flex flex-1 flex-col">
-        <div className="rounded-3xl border-2 border-black bg-zinc-800 p-8 shadow-[6px_6px_0_0_black]">
-          <p className="font-mono text-xs uppercase tracking-widest text-zinc-500">
+      <div className="mt-8 flex flex-1 flex-col">
+        <div
+          className="rounded-2xl border p-6"
+          style={{
+            backgroundColor: '#0A0A0A',
+            borderColor: 'rgba(5, 255, 145, 0.1)',
+            boxShadow: 'inset 0px 1px 1px rgba(255, 255, 255, 0.05)',
+          }}
+        >
+          <p className="font-mono text-[10px] uppercase tracking-widest text-neon/50">
             {'// module: reservation'}
           </p>
-          <p className="mt-4 text-sm text-zinc-400">
-            대여 UI는 이 카드 영역에 연결됩니다.
+          <p className="mt-3 text-sm text-zinc-500">
+            대여 UI는 이 영역에 연결됩니다.
           </p>
         </div>
       </div>

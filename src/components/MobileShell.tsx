@@ -2,22 +2,20 @@
 
 import type { ReactNode } from 'react'
 
-type MobileShellProps = {
+/*
+  MobileShell: 430px 중앙 정렬 구조 래퍼.
+  배경/스타일은 각 페이지/셸이 직접 지정합니다.
+  design.json → container: 24px (rounded-3xl) 적용은 내부 카드 단위에서.
+*/
+interface MobileShellProps {
   children: ReactNode
-  innerClassName?: string
+  className?: string
 }
 
-export function MobileShell({ children, innerClassName = '' }: MobileShellProps) {
+export function MobileShell({ children, className = '' }: MobileShellProps) {
   return (
-    <div className="flex min-h-dvh justify-center bg-zinc-950 p-3 pb-5 pr-5 pt-3">
-      <div
-        className={[
-          'flex min-h-[calc(100dvh-1.5rem)] w-full max-w-[430px] flex-col border-4 border-black bg-zinc-900 shadow-[8px_8px_0_0_black]',
-          innerClassName,
-        ]
-          .filter(Boolean)
-          .join(' ')}
-      >
+    <div className="flex min-h-dvh justify-center bg-zinc-950">
+      <div className={`w-full max-w-[430px] min-h-dvh ${className}`.trim()}>
         {children}
       </div>
     </div>

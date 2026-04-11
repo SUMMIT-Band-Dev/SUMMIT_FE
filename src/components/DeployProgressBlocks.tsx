@@ -1,6 +1,7 @@
 'use client'
 
-type DeployProgressBlocksProps = {
+/* design.json primaryButton.surfaceColor = #05FF91 → bg-neon */
+interface DeployProgressBlocksProps {
   filled: number
   total?: number
 }
@@ -13,10 +14,7 @@ export function DeployProgressBlocks({
 
   return (
     <div
-      className="grid w-full gap-1 sm:gap-1.5"
-      style={{
-        gridTemplateColumns: `repeat(${total}, minmax(0, 1fr))`,
-      }}
+      className="flex w-full gap-1"
       role="progressbar"
       aria-valuenow={safeFilled}
       aria-valuemin={0}
@@ -27,10 +25,10 @@ export function DeployProgressBlocks({
         <div
           key={i}
           className={[
-            'h-3 min-h-[10px] w-full border-2 border-black sm:h-3.5',
+            'h-1.5 flex-1 rounded-full transition-all duration-500',
             i < safeFilled
-              ? 'bg-lime-300 shadow-[2px_2px_0_0_black]'
-              : 'bg-zinc-700',
+              ? 'bg-neon shadow-neon-glow-sm'
+              : 'bg-zinc-800',
           ].join(' ')}
         />
       ))}

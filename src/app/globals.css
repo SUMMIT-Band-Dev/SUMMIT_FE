@@ -3,11 +3,27 @@
 @tailwind utilities;
 
 /*
-  Vite에서는 보통 public/index.html 안의 <div id="root">에 React가 마운트됩니다.
-  Next.js(App Router)에는 그 엔트리가 없고, 대신 이 CSS를 app/layout.tsx가 import하여
-  전 페이지에 공통 스타일을 씁니다.
+  design.json → Metrillo High-Tech Dark 전역 토큰
+  Tailwind arbitrary value 대신 var() 로도 참조 가능
 */
+:root {
+  --neon: #05FF91;
+  --neon-glow: rgba(5, 255, 145, 0.4);
+  --neon-dim: rgba(5, 255, 145, 0.1);
+
+  /* design.json borderRadius */
+  --radius-action: 9999px;
+  --radius-container: 24px;
+  --radius-card: 16px;
+}
+
 html,
-body {
+body,
+#__next {
   min-height: 100dvh;
 }
+
+/* 커스텀 스크롤바 — 다크 테마에 어울리게 */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.08); border-radius: 99px; }
