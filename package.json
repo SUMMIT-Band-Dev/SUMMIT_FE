@@ -1,24 +1,30 @@
 {
-  "name": "summit_fe",
-  "version": "1.0.0",
-  "description": "",
-  "homepage": "https://github.com/SUMMIT-Band-Dev/SUMMIT_FE#readme",
-  "bugs": {
-    "url": "https://github.com/SUMMIT-Band-Dev/SUMMIT_FE/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SUMMIT-Band-Dev/SUMMIT_FE.git"
-  },
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "name": "summit-fe",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@types/node": "^25.6.0",
-    "typescript": "^6.0.2"
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.58.0",
+    "vite": "^8.0.4"
   }
 }
