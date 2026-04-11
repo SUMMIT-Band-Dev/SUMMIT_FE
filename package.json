@@ -1,0 +1,24 @@
+{
+  "name": "summit_fe",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/SUMMIT-Band-Dev/SUMMIT_FE#readme",
+  "bugs": {
+    "url": "https://github.com/SUMMIT-Band-Dev/SUMMIT_FE/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SUMMIT-Band-Dev/SUMMIT_FE.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/node": "^25.6.0",
+    "typescript": "^6.0.2"
+  }
+}
