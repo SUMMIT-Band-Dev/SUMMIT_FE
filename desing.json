@@ -1,0 +1,42 @@
+{
+  "designSystem": {
+    "identity": "Metrillo High-Tech Dark",
+    "globalStyles": {
+      "borderRadius": {
+        "action": "9999px",
+        "container": "24px",
+        "card": "16px"
+      },
+      "borderThickness": "1px"
+    },
+    "componentStyles": {
+      "heroSection": {
+        "background": "radial-gradient(at top center, #011C11 0%, #000000 60%)",
+        "typography": {
+          "heading": "text-white font-bold tracking-tighter text-5xl",
+          "subheading": "text-zinc-400 leading-relaxed max-w-2xl"
+        }
+      },
+      "primaryButton": {
+        "surfaceColor": "#05FF91",
+        "textColor": "#000000",
+        "shadow": "0px 0px 20px rgba(5, 255, 145, 0.4)",
+        "interaction": {
+          "hover": "scale(1.05)",
+          "active": "scale(0.98)"
+        }
+      },
+      "contentCards": {
+        "surfaceColor": "#0A0A0A",
+        "borderTreatment": "rgba(255, 255, 255, 0.05)",
+        "elevation": "inset 0px 1px 1px rgba(255, 255, 255, 0.05)",
+        "contentElements": {
+          "iconRendering": {
+            "fillColor": "#05FF91",
+            "background": "rgba(5, 255, 145, 0.1)"
+          }
+        }
+      }
+    }
+  }
+}

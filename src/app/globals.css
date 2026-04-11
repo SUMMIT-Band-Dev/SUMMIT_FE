@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Vite에서는 보통 public/index.html 안의 <div id="root">에 React가 마운트됩니다.
+  Next.js(App Router)에는 그 엔트리가 없고, 대신 이 CSS를 app/layout.tsx가 import하여
+  전 페이지에 공통 스타일을 씁니다.
+*/
+html,
+body {
+  min-height: 100dvh;
+}
