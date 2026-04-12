@@ -14,11 +14,25 @@ const config: Config = {
          * Tailwind에서 bg-neon / text-neon / border-neon 으로 사용
          */
         neon: '#05FF91',
+        rockway: {
+          primary: '#B22234',
+          bgMain: '#05070A',
+          bgSection: '#080A0F',
+          textPrimary: '#FFFFFF',
+          textSecondary: '#A0A0A0',
+        },
       },
       boxShadow: {
         'neon-glow': '0px 0px 20px rgba(5, 255, 145, 0.4)',
         'neon-glow-sm': '0px 0px 8px rgba(5, 255, 145, 0.35)',
         'card-inset': 'inset 0px 1px 1px rgba(255, 255, 255, 0.05)',
+        'video-card': '0 10px 30px rgba(0,0,0,0.5)',
+      },
+      maxWidth: {
+        app: '1200px',
+      },
+      spacing: {
+        section: '100px',
       },
       keyframes: {
         'gradient-drift-y': {

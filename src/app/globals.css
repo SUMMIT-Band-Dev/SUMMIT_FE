@@ -10,6 +10,11 @@
   --neon: #05FF91;
   --neon-glow: rgba(5, 255, 145, 0.4);
   --neon-dim: rgba(5, 255, 145, 0.1);
+  --rockway-primary: #b22234;
+  --rockway-bg-main: #05070a;
+  --rockway-bg-section: #080a0f;
+  --rockway-text-primary: #ffffff;
+  --rockway-text-secondary: #a0a0a0;
 
   /* design.json borderRadius */
   --radius-action: 9999px;
@@ -21,6 +26,11 @@ html,
 body,
 #__next {
   min-height: 100dvh;
+}
+
+body {
+  background: var(--rockway-bg-main);
+  color: var(--rockway-text-primary);
 }
 
 /* 커스텀 스크롤바 — 다크 테마에 어울리게 */
