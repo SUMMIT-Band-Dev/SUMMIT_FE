@@ -1,5 +1,5 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from "next";
+import "./globals.css";
 
 /*
   ┌─────────────────────────────────────────────────────────────────────────┐
@@ -16,18 +16,18 @@ import './globals.css'
 */
 
 export const metadata: Metadata = {
-  title: 'SUMMIT',
-  description: '숭실대 밴드 써밋 모바일 웹',
-}
+  title: "SUMMIT",
+  description: "숭실대 밴드 써밋 모바일 웹",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="ko">
       <body className="antialiased">{children}</body>
     </html>
-  )
+  );
 }
