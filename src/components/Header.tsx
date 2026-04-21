@@ -1,12 +1,24 @@
 "use client";
 
+import Image from "next/image";
+
 type HeaderProps = {
   onOpenMenu: () => void;
 };
 
 export default function Header({ onOpenMenu }: HeaderProps) {
   return (
-    <header className="relative h-[60px] w-full">
+    <header className="absolute top-0 left-0 z-20 h-[60px] w-full">
+      {/* Figma x=32, y=12 기준 로고 영역(24x35)을 좌측에 배치합니다. */}
+      <Image
+        src="/summit-logo.png"
+        alt="SUMMIT 로고"
+        width={24}
+        height={35}
+        priority
+        className="absolute top-3 left-8 h-[35px] w-6 object-contain"
+      />
+
       {/* Figma Header의 가운데 로고 텍스트 위치를 맞추기 위해 절대 배치를 사용합니다. */}
       <h1 className="absolute top-4 left-1/2 -translate-x-1/2 text-2xl leading-[28.640625px] font-semibold text-black">
         SUMMIT
