@@ -5,7 +5,11 @@
   --foreground: #171717;
 }
 
-@theme inline {
+/* 
+  Removed unsupported @theme at-rule.
+  Define CSS variables globally instead.
+*/
+:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -51,9 +55,46 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .maintext-fade-up-hidden,
-  .maintext-fade-up-active {
+  .maintext-fade-up-active,
+  .figma-fade-in-hidden,
+  .figma-fade-in-text-active,
+  .figma-fade-in-logo-active {
     opacity: 1;
     transform: none;
     animation: none;
   }
+}
+
+/* Subtext_1 / Subtext_2 / logotext: Figma Fade In 인터랙션 */
+.figma-fade-in-hidden {
+  opacity: 0;
+}
+
+/* Subtext_1, Subtext_2: 먼저 페이드 인 */
+.figma-fade-in-text-active {
+  opacity: 0;
+  animation: figma-fade-in 1200ms ease-out 100ms forwards;
+  will-change: opacity;
+}
+
+/* logotext: Subtext들이 나온 직후 이어서 페이드 인 */
+.figma-fade-in-logo-active {
+  opacity: 0;
+  animation: figma-fade-in 1200ms ease-out 450ms forwards;
+  will-change: opacity;
+}
+
+@keyframes figma-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Browser preview에서 제거한 left/top 값을 소스에도 고정 반영합니다. */
+nextjs-portal {
+  left: unset !important;
+  top: unset !important;
 }
