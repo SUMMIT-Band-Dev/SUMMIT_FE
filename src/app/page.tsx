@@ -133,7 +133,9 @@ export default function Home() {
                 ? "figma-fade-in-text-active"
                 : "figma-fade-in-hidden"
             }`}
-            style={{ fontFamily: '"Pretendard", system-ui, -apple-system, sans-serif' }}
+            style={{
+              fontFamily: '"Pretendard", system-ui, -apple-system, sans-serif',
+            }}
           >
             Since 2012,
           </p>
@@ -146,7 +148,9 @@ export default function Home() {
                 ? "figma-fade-in-text-active"
                 : "figma-fade-in-hidden"
             }`}
-            style={{ fontFamily: '"Pretendard", system-ui, -apple-system, sans-serif' }}
+            style={{
+              fontFamily: '"Pretendard", system-ui, -apple-system, sans-serif',
+            }}
           >
             써밋 웹페이지 제작중입니다.
           </p>
@@ -162,7 +166,10 @@ export default function Home() {
           >
             <p
               className="absolute top-[6px] left-[78.5px] w-[197px] text-center text-[40px] leading-[44px] font-normal text-black"
-              style={{ fontFamily: '"Puradak Gentle Gothic OTF", "Pretendard", sans-serif' }}
+              style={{
+                fontFamily:
+                  '"Puradak Gentle Gothic OTF", "Pretendard", sans-serif',
+              }}
             >
               SUMMIT
             </p>
